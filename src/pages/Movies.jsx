@@ -1,7 +1,5 @@
-const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+const Movie = () => {
+  return <div>Movie</div>
+};
 
-export default Home
+export default Movie;
