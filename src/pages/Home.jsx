@@ -7,23 +7,21 @@ const Home = () => {
   const [topMovies, setTopMovies] = useState([])
 
   const getTopRatedMovies = async (url) => {
-
     const res = await fetch(url)
     const data = await res.json()
 
+    setTopMovies(data.results);
   };
 
   useEffect(() => {
-
     const topRatedUrl = `${moviesURL}top_rated?${apiKey}`
 
     getTopRatedMovies(topRatedUrl);
-
-
   }, [])
 
 
-  return <div>Home</div>
+  return <div>
+    {topMovies && topMovies.map((movie) => <p>{movie.title}</p>)}</div>
 };
 
 export default Home
