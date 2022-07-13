@@ -4,10 +4,10 @@ import {FaStar} from 'react-icons/fa'
 
 const imageUrl = import.meta.env.VITE_IMG;
 
-const MovieCard = () => {
-  return (
-    <div>MovieCard</div>
-  )
-}
+const MovieCard = ({movie, showLink = true}) => {
+  return <div className="movie-card">
+    <img src={imageUrl + movie.poster_path} alt="" /> 
+  </div>;
+};
 
 export default MovieCard
