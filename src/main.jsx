@@ -9,7 +9,7 @@ import Search from "./pages/Search";
 
 import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
@@ -21,4 +21,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
-)
+);
