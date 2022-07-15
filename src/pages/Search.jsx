@@ -17,14 +17,14 @@ const Search = () => {
     const res = await fetch(url);
     const data = await res.json();
 
-    setTopMovies(data.results);
+    setMovies(data.results);
   };
 
   useEffect(() => {
-    const searchwithQuiryURL = `${searchUrl}?${apiKey}&`;
+    const searchwithQuiryURL = `${searchURL}?${apiKey}&query=${query}`;
 
     getSearchedMovies(searchwithQuiryURL);
-  }, []);
+  }, [query]);
 
   return ( 
   <div className="container">
